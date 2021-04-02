@@ -5,12 +5,12 @@ file.close()
 def revword (string):
     wordreverse = string[::-1]
     return wordreverse.lower()
-def countword():
-    cword=1
-    i=0
-    while i<len(read):
-        read[i]=revword(read[i])
-        if read[i]==Word:
-            cword=cword + 1
-        i=i+1
-        return cword
+def countword(filename):
+    cword = 1
+    for line in read:
+        words = line.split()
+        for word in words:
+            revw= revword(word)
+            if Word==revw:
+                cword+=1
+    return cword
