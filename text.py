@@ -1,11 +1,11 @@
-file = open ('text.txt',"r")
-Word = file.readline().rstrip()
-read = file.read().split()
-file.close()
 def revword (string):
     wordreverse = string[::-1]
     return wordreverse.lower()
-def countword(filename):
+def countword(read):
+    file = open ('text.txt',"r")
+    Word = file.readline().rstrip()
+    read = file.read().split()
+    file.close()
     cword = 1
     for line in read:
         words = line.split()
