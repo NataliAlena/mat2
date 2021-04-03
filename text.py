@@ -1,16 +1,18 @@
+file = open ("text.txt" ,"r")
+originalWord = file.readline().rstrip()
+read = file.read().split()
+file.close()
 def revword (string):
-    wordreverse = string[::-1]
-    return wordreverse.lower()
-def countword(read):
-    file = open ('text.txt',"r")
-    Word = file.readline().rstrip()
-    read = file.read().split()
-    file.close()
+    word = string[::-1]
+    return word.lower()
+
+def countword( ):
     cword = 1
     for line in read:
         words = line.split()
         for word in words:
-            revw= revword(word)
-            if Word==revw:
+            rev= revword(word)
+            if originalWord==rev:
                 cword+=1
     return cword
+
